@@ -45,19 +45,19 @@ functions:
           rate: rate(5 minutes)
           enabled: true
 
-  parseHtml:
-    handler: src/parse-html.default
-    timeout: 10
-    memorySize: 256
-    events:
-      - http:
-          method: post
-          path: parse-html
-          cors: true
-      # Ping every 5 minutes to avoid cold starts
-      - schedule:
-          rate: rate(5 minutes)
-          enabled: true
+#  parseHtml:
+#    handler: src/parse-html.default
+#    timeout: 10
+#    memorySize: 256
+#    events:
+#      - http:
+#          method: post
+#          path: parse-html
+#          cors: true
+#      # Ping every 5 minutes to avoid cold starts
+#      - schedule:
+#          rate: rate(5 minutes)
+#          enabled: true
 
 plugins:
   - serverless-webpack
